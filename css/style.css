@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* MAIN LAYOUT */
+main{
+    padding: 20px;
+}
+body{
+    background-color: white;
+}
+.row{
+    max-width: 1200px;
+    margin: auto;
+}
+.product{
+    width: calc(100% / 3);
+    display: inline-block;
+    padding: 5px;
+}
+/* ////MAIN LAYOUT */
+
+/* PRODUCT LAYOUT */
+.product>.frame{
+    width: 100%;
+    position: relative;
+}
+.frame>img{
+    width: inherit;
+}
+.product>.description{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.product>.price{
+    display: inline-block;
+    margin-right: 1rem;
+    color: #EB0023;
+    font-weight: bold;
+}
+.product .price>.sconto{
+    color: black;
+    text-decoration: line-through;
+}
+/* ////PRODUCT LAYOUT */
+
+/* POSITIONING */
+.frame>.like{
+    position: absolute;
+    font-size: 2rem;
+    vertical-align: middle;
+    transition: 0.2s;
+    /* background-color: white; */
+    padding: 15px 20px;
+    right: 0%;
+    top: 3%;
+}
+.product>.frame:hover{
+    cursor: pointer;
+}
+.product>.frame:hover .like{
+    color: red;
+}
+.frame>.discount{
+    position: absolute;
+    color: white;
+    bottom: 3%;
+    left: 0%;
+    height: 2rem;
+    line-height: 2rem;
+}
+.frame>.discount>.percentage{
+    display: inline-block;
+    height: inherit;
+    background-color: #EB0023;
+    padding: 0 1rem;
+    box-shadow: 3px 3px #222222;
+}
+.frame>.discount>.sustain{
+    display: inline-block;
+    height: inherit;
+    background-color: #00875A;
+    padding: 0 1rem;
+    box-shadow: 3px 3px #222222;
+}
+/* ////POSITIONING */
+
+/* HOOVER IMAGE */
+.product>.frame>.front{
+    opacity: 1;
+    transition: opacity 200ms;
+}
+.frame>.behind{
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    transition: opacity 200ms;
+    /* display: none; */
+}
+.frame:hover .behind{
+    opacity: 1;
+    /* display: block; */
+}
+.frame:hover .front{
+    opacity: 0;
+}
+
+.over{
+    z-index: 1;
+}
+/* ////HOOVER IMAGE */
+/*SEZIONE TEST*/
